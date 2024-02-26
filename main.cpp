@@ -10,23 +10,23 @@ smart_array(size_t size): arr_(new int[size]), size_(size)
     delete[] arr_;
 	std::cout << "\ndestructor called\n";
 };
-void add_element(int x){
+void add_element(int element){
 	if (this->counter < this->size_) {
 		counter++;
-		arr_[counter] = x;
+		arr_[counter] = element;
 		std::cout << arr_[counter] << "\t";
 	} else {
 		std::cout << "Array index out of bounds!" << std::endl;
 	}
 };
-auto get_element(int a) {
+auto get_element(int index) {
 
-	if(this->size_ >= a) {
-		for(int i = 0; i <= a; i++){
-			if (i == a) {
-				std::cout << arr_[i] << std::endl;
-			}
-		}
+	if(this->size_ >= index) {
+		// for(int i = 0; i <= index; i++){
+			// if (i == a) {
+				std::cout << arr_[index] << std::endl;
+			// }
+		// }
 	} else {
 		return "\nThere is no such index in the array";
 	}
