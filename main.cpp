@@ -21,12 +21,9 @@ void add_element(int element){
 };
 auto get_element(int index) {
 
-	if(this->size_ >= index) {
-		// for(int i = 0; i <= index; i++){
-			// if (i == a) {
+	if(this->counter >= index) {
+
 				std::cout << arr_[index] << std::endl;
-			// }
-		// }
 	} else {
 		return "\nThere is no such index in the array";
 	}
@@ -52,7 +49,7 @@ try {
 	arr.add_element(14);
 	arr.add_element(15);
 	arr.add_element(16);
-	std::cout << arr.get_element(7) << std::endl;
+	std::cout << arr.get_element(3) << std::endl;
 }
 catch (const std::exception& ex) {
 	std::cout << ex.what() << std::endl;
