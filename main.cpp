@@ -16,9 +16,10 @@ public:
 	{
 		if (this->counter < this->size_)
 		{
-			counter++;
+			
 			arr_[counter] = element;
 			std::cout << arr_[counter] << "\t";
+			counter++;
 		}
 		else
 		{
@@ -29,14 +30,13 @@ public:
 	int get_element(int index)
 	{
 
-		if (this->counter < index)
+		if (this->counter > index)
 		{
 
-			return arr_[index];
+			return this->arr_[index];
 		}
 		else
 		{
-
 			throw "\nThere is no such index in the array\n";
 		}
 
@@ -60,7 +60,7 @@ int main()
 		arr.add_element(14);
 		arr.add_element(15);
 		arr.add_element(16);
-		std::cout << arr.get_element(6) << std::endl;
+		std::cout << std::endl <<arr.get_element(6) << std::endl;
 	}
 	catch (const std::exception &ex)
 	{
