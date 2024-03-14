@@ -25,9 +25,12 @@ int get_element(int index) {
 
 				std::cout << arr_[index] << std::endl;
 
+	} else {
+
+		throw "\nThere is no such index in the array\n";
 	}
 
-	throw "\nThere is no such index in the array\n";
+	return arr_[index];
 }
 
 private:
