@@ -16,19 +16,18 @@ void add_element(int element){
 		arr_[counter] = element;
 		std::cout << arr_[counter] << "\t";
 	} else {
-		std::cout << "Array index out of bounds!" << std::endl;
+		std::cout << "\nArray index out of bounds!\n" << std::endl;
 	}
 };
-auto get_element(int index) {
+int get_element(int index) {
 
 	if(this->counter >= index) {
 
 				std::cout << arr_[index] << std::endl;
-	} else {
-		return "\nThere is no such index in the array";
+
 	}
 
-	return "ERROR";
+	throw "\nThere is no such index in the array\n";
 }
 
 private:
